@@ -1,0 +1,6 @@
+1|Iphone|5800
+2|Mac Pro|9800
+3|Bike|800
+4|Watch|10600
+5|Coffee|31
+6|Alex Python|120
