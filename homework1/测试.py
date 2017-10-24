@@ -38,6 +38,7 @@ else:
     #打印欢迎信息'''
 
 #验证用户名/密码函数
+'''
 def user_confirm(username_input,userpassword_input):
     #将用户名/密码文件转为列表
     userinform_file = 'user_inform.txt'
@@ -76,4 +77,41 @@ def user_login():
 
 #程序开始
 if __name__ == '__main__':
-    user_login()
+    user_login()'''
+'''
+#列表转文件函数，输入为列表和文件名字符串，返回值为文件内容字符串
+def list_to_file(list_input,filename):
+    #将二级列表转为字符串
+    list_str = ''
+    for secondary_list in list_input:
+        list_str = list_str + '|'.join(secondary_list) + '\n'
+    #将字符串写入文件
+    with open(filename,'w') as f:
+        f.write(list_str)
+    return list_str
+
+list_to_file([['1','3'],['a','b'],['#','$']],'ceshi.txt')'''
+'''
+#文件转列表函数，输入为文件名字符串，返回值为列表
+def file_to_list(filename):
+    with open(filename, 'r') as f:
+        list_output = []
+        str_list = f.readlines()
+        for string in str_list:
+            list_output.append(string.rstrip().split('|'))
+    return list_output
+
+ceshi = file_to_list('ceshi.txt')
+print(ceshi)'''
+'''
+list =[1,2,3]
+list2 = ['a','b']
+list.append(list2[0])
+print(list)'''
+
+dabiao = [1,2,3,4,[5,6]]
+for biao in dabiao:
+    if biao == 2:
+        biao = 999
+print(dabiao)
+print(biao)
